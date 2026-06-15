@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutte le squadre della U.S. Sporting Arno 1979 — Prima Squadra e settore giovanile.">
+  <title>Squadre — U.S. Sporting Arno 1979</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .team-section { margin-bottom: 64px; }
+    .team-section-header {
+      display: flex; align-items: center; gap: 20px;
+      background: linear-gradient(135deg, var(--color-dark), #2a0a1e);
+      color: #fff; padding: 22px 28px; border-radius: var(--radius);
+      margin-bottom: 28px;
+    }
+    .team-section-icon { font-size: 2rem; }
+    .team-section-header h2 { font-size: 1.2rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+    .team-section-header p { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+    .team-detail-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; }
+    .team-photo-wrap {
+      height: 280px; border-radius: var(--radius); overflow: hidden;
+      background: var(--color-light2);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-dark);
+    }
+    .team-photo-wrap img { width:100%; height:100%; object-fit:cover; }
+    .team-photo-placeholder { display:flex; flex-direction:column; align-items:center; gap:12px; color:var(--color-primary-dark); }
+    .team-photo-placeholder .icon { font-size:4rem; opacity:0.5; }
+    .team-photo-placeholder p { font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; opacity:0.5; }
+    .team-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+    .team-info-item { padding: 12px 16px; background: var(--color-light); border-radius: var(--radius-sm); }
+    .team-info-item .label { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary-dark); margin-bottom: 2px; }
+    .team-info-item .value { font-size: 0.9rem; font-weight: 700; color: var(--color-dark); }
+    .rosa-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 16px; margin-top: 20px; }
+    .rosa-card { background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); overflow: hidden; text-align: center; transition: var(--transition); }
+    .rosa-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .rosa-photo { height: 110px; background: var(--color-light2); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+    .rosa-photo img { width:100%; height:100%; object-fit:cover; }
+    .rosa-body { padding: 10px 12px; }
+    .rosa-number { font-size: 1.2rem; font-weight: 900; color: var(--color-primary-dark); }
+    .rosa-name { font-size: 0.8rem; font-weight: 700; color: var(--color-dark); line-height: 1.2; }
+    .rosa-role { font-size: 0.68rem; color: var(--color-text-light); }
+    .category-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+    .filter-btn { padding: 8px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: var(--transition); background: var(--color-gray); color: var(--color-dark); border: 2px solid transparent; }
+    .filter-btn:hover, .filter-btn.active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-dark); }
+    @media(max-width:768px){ .team-detail-grid{grid-template-columns:1fr;} .team-info-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+  <div class="ticker-wrap" role="marquee"><div class="ticker-inner"><div class="ticker-label">⚽ NEWS</div><div class="ticker-scroll"><div class="ticker-content"></div></div></div></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="images/logo.png" alt="U.S. Sporting Arno 1979 Logo">
+        <div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div>
+      </a>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="societa.html">La Società</a></li>
+          <li><a href="squadre.html" class="active">Squadre</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="allenamenti.html">Allenamenti</a></li>
+          <li><a href="notizie.html">Notizie</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta"><a href="iscrizioni.html" class="btn-cta">Iscrizioni Online</a></div>
+      <button class="hamburger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" role="navigation">
+    <a href="index.html">🏠 Home</a><a href="societa.html">🏟️ La Società</a><a href="squadre.html">👥 Squadre</a>
+    <a href="calendario.html">📅 Calendario</a><a href="allenamenti.html">⏰ Allenamenti</a>
+    <a href="notizie.html">📰 Notizie</a><a href="contatti.html">📞 Contatti</a>
+    <a href="iscrizioni.html" class="btn-cta-mobile">⚽ Iscrizioni Online</a>
+  </nav>
+
+  <main role="main">
+
+    <div class="page-hero">
+      <div class="container">
+        <h1>Le nostre <span>Squadre</span></h1>
+        <p>Prima squadra e settore giovanile — Per ogni età la squadra giusta</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Squadre</span></nav>
+      </div>
+    </div>
+
+    <section class="section" aria-label="Elenco squadre">
+      <div class="container">
+
+        <!-- PRIMA SQUADRA -->
+        <div class="team-section">
+          <div class="team-section-header">
+            <span class="team-section-icon">🥇</span>
+            <div>
+              <h2>Prima Squadra</h2>
+              <p>[Campionato / Lega di appartenenza] — Stagione [Anno/Anno]</p>
+            </div>
+          </div>
+          <div class="team-detail-grid">
+            <div>
+              <div class="team-photo-wrap">
+                <!-- 💡 <img src="images/prima-squadra.jpg" alt="Prima Squadra" class="lightbox-trigger"> -->
+                <div class="team-photo-placeholder"><span class="icon">📸</span><p>Foto prima squadra<br>(prima-squadra.jpg)</p></div>
+              </div>
+            </div>
+            <div class="fade-in">
+              <p style="line-height:1.8; color:var(--color-text); margin-bottom:16px;">[Descrizione della prima squadra: campionato in cui milita, obiettivi stagionali, eventuali informazioni aggiuntive.]</p>
+              <div class="team-info-grid">
+                <div class="team-info-item"><p class="label">Allenatore</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Vice-allenatore</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Preparatore atletico</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Dirigente accompagnatore</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Campo di gioco</p><p class="value">[Nome campo e città]</p></div>
+                <div class="team-info-item"><p class="label">Colori sociali</p><p class="value">Rosa e Nero</p></div>
+              </div>
+              <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a href="calendario.html" class="btn btn-primary btn-sm">Calendario partite</a>
+                <a href="allenamenti.html" class="btn btn-dark btn-sm">Orari allenamenti</a>
+              </div>
+            </div>
+          </div>
+          <!-- ROSA -->
+          <h3 style="margin-top:36px; font-size:1rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--color-dark); margin-bottom:4px;">Rosa giocatori</h3>
+          <p style="font-size:0.82rem; color:var(--color-text-light); margin-bottom:0;">[Aggiungi o modifica i giocatori nell'elenco qui sotto]</p>
+          <div class="rosa-grid">
+            <div class="rosa-card"><div class="rosa-photo">👤</div><div class="rosa-body"><p class="rosa-number">1</p><p class="rosa-name">[Cognome Nome]</p><p class="rosa-role">Portiere</p></div></div>
+            <div class="rosa-card"><div class="rosa-photo">👤</div><div class="rosa-body"><p class="rosa-number">2</p><p class="rosa-name">[Cognome Nome]</p><p class="rosa-role">Difensore</p></div></div>
+            <div class="rosa-card"><div class="rosa-photo">👤</div><div class="rosa-body"><p class="rosa-number">3</p><p class="rosa-name">[Cognome Nome]</p><p class="rosa-role">Difensore</p></div></div>
+            <div class="rosa-card"><div class="rosa-photo">👤</div><div class="rosa-body"><p class="rosa-number">4</p><p class="rosa-name">[Cognome Nome]</p><p class="rosa-role">Centrocampista</p></div></div>
+            <div class="rosa-card"><div class="rosa-photo">👤</div><div class="rosa-body"><p class="rosa-number">5</p><p class="rosa-name">[Cognome Nome]</p><p class="rosa-role">Centrocampista</p></div></div>
+            <div class="rosa-card"><div class="rosa-photo">👤</div><div class="rosa-body"><p class="rosa-number">7</p><p class="rosa-name">[Cognome Nome]</p><p class="rosa-role">Attaccante</p></div></div>
+            <div class="rosa-card"><div class="rosa-photo">👤</div><div class="rosa-body"><p class="rosa-number">9</p><p class="rosa-name">[Cognome Nome]</p><p class="rosa-role">Attaccante</p></div></div>
+            <div class="rosa-card" style="border:2px dashed var(--color-primary-dark); box-shadow:none; display:flex; align-items:center; justify-content:center; min-height:80px; flex-direction:column; gap:6px;"><div style="font-size:1.5rem; color:var(--color-primary-dark); opacity:0.5;">+</div><div style="font-size:0.7rem; color:var(--color-text-light); text-align:center; padding:8px;">Aggiungi<br>giocatori</div></div>
+          </div>
+        </div>
+
+        <!-- JUNIORES -->
+        <div class="team-section">
+          <div class="team-section-header">
+            <span class="team-section-icon">⚽</span>
+            <div><h2>Juniores</h2><p>[Campionato] — Stagione [Anno/Anno] — Età: [anni]-[anni]</p></div>
+          </div>
+          <div class="team-detail-grid">
+            <div><div class="team-photo-wrap"><div class="team-photo-placeholder"><span class="icon">📸</span><p>Foto Juniores<br>(juniores.jpg)</p></div></div></div>
+            <div class="fade-in">
+              <p style="line-height:1.8; color:var(--color-text); margin-bottom:16px;">[Descrizione categoria Juniores.]</p>
+              <div class="team-info-grid">
+                <div class="team-info-item"><p class="label">Allenatore</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Dirigente</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Campo</p><p class="value">[Nome campo]</p></div>
+                <div class="team-info-item"><p class="label">Fascia d'età</p><p class="value">[X–Y anni]</p></div>
+              </div>
+              <div style="margin-top:20px;"><a href="iscrizioni.html" class="btn btn-primary btn-sm">Iscriviti in questa categoria</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALLIEVI -->
+        <div class="team-section">
+          <div class="team-section-header">
+            <span class="team-section-icon">🏃</span>
+            <div><h2>Allievi</h2><p>[Campionato] — Stagione [Anno/Anno] — Età: [anni]-[anni]</p></div>
+          </div>
+          <div class="team-detail-grid">
+            <div><div class="team-photo-wrap"><div class="team-photo-placeholder"><span class="icon">📸</span><p>Foto Allievi<br>(allievi.jpg)</p></div></div></div>
+            <div class="fade-in">
+              <p style="line-height:1.8; color:var(--color-text); margin-bottom:16px;">[Descrizione categoria Allievi.]</p>
+              <div class="team-info-grid">
+                <div class="team-info-item"><p class="label">Allenatore</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Dirigente</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Campo</p><p class="value">[Nome campo]</p></div>
+                <div class="team-info-item"><p class="label">Fascia d'età</p><p class="value">[X–Y anni]</p></div>
+              </div>
+              <div style="margin-top:20px;"><a href="iscrizioni.html" class="btn btn-primary btn-sm">Iscriviti in questa categoria</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GIOVANISSIMI -->
+        <div class="team-section">
+          <div class="team-section-header">
+            <span class="team-section-icon">🌟</span>
+            <div><h2>Giovanissimi</h2><p>[Campionato] — Stagione [Anno/Anno] — Età: [anni]-[anni]</p></div>
+          </div>
+          <div class="team-detail-grid">
+            <div><div class="team-photo-wrap"><div class="team-photo-placeholder"><span class="icon">📸</span><p>Foto Giovanissimi<br>(giovanissimi.jpg)</p></div></div></div>
+            <div class="fade-in">
+              <p style="line-height:1.8; color:var(--color-text); margin-bottom:16px;">[Descrizione categoria Giovanissimi.]</p>
+              <div class="team-info-grid">
+                <div class="team-info-item"><p class="label">Allenatore</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Dirigente</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Campo</p><p class="value">[Nome campo]</p></div>
+                <div class="team-info-item"><p class="label">Fascia d'età</p><p class="value">[X–Y anni]</p></div>
+              </div>
+              <div style="margin-top:20px;"><a href="iscrizioni.html" class="btn btn-primary btn-sm">Iscriviti in questa categoria</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESORDIENTI -->
+        <div class="team-section">
+          <div class="team-section-header">
+            <span class="team-section-icon">⭐</span>
+            <div><h2>Esordienti</h2><p>Settore giovanile — Età: [anni]-[anni]</p></div>
+          </div>
+          <div class="team-detail-grid">
+            <div><div class="team-photo-wrap"><div class="team-photo-placeholder"><span class="icon">📸</span><p>Foto Esordienti<br>(esordienti.jpg)</p></div></div></div>
+            <div class="fade-in">
+              <p style="line-height:1.8; color:var(--color-text); margin-bottom:16px;">[Descrizione categoria Esordienti.]</p>
+              <div class="team-info-grid">
+                <div class="team-info-item"><p class="label">Allenatore</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Dirigente</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Campo</p><p class="value">[Nome campo]</p></div>
+                <div class="team-info-item"><p class="label">Fascia d'età</p><p class="value">[X–Y anni]</p></div>
+              </div>
+              <div style="margin-top:20px;"><a href="iscrizioni.html" class="btn btn-primary btn-sm">Iscriviti in questa categoria</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PULCINI -->
+        <div class="team-section">
+          <div class="team-section-header">
+            <span class="team-section-icon">👦</span>
+            <div><h2>Pulcini &amp; Piccoli Amici</h2><p>Scuola Calcio — Età: dai [X] anni in su</p></div>
+          </div>
+          <div class="team-detail-grid">
+            <div><div class="team-photo-wrap"><div class="team-photo-placeholder"><span class="icon">📸</span><p>Foto Pulcini<br>(pulcini.jpg)</p></div></div></div>
+            <div class="fade-in">
+              <p style="line-height:1.8; color:var(--color-text); margin-bottom:16px;">[Descrizione scuola calcio: approccio, metodo didattico, valori che si insegnano ai più piccoli.]</p>
+              <div class="team-info-grid">
+                <div class="team-info-item"><p class="label">Responsabile</p><p class="value">[Nome Cognome]</p></div>
+                <div class="team-info-item"><p class="label">Istruttori</p><p class="value">[Nomi istruttori]</p></div>
+                <div class="team-info-item"><p class="label">Campo</p><p class="value">[Nome campo]</p></div>
+                <div class="team-info-item"><p class="label">Fascia d'età</p><p class="value">Dai [X] anni</p></div>
+              </div>
+              <div style="margin-top:20px;"><a href="iscrizioni.html" class="btn btn-primary btn-sm">Iscriviti alla Scuola Calcio</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><div class="footer-logo"><img src="images/logo.png" alt="U.S. Sporting Arno 1979"><div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div></div><p>[Breve descrizione della società.]</p><div class="footer-social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="WhatsApp">💬</a></div></div>
+        <div class="footer-col"><h4>Sezioni</h4><ul><li><a href="index.html">▸ Home</a></li><li><a href="societa.html">▸ La Società</a></li><li><a href="squadre.html">▸ Squadre</a></li><li><a href="calendario.html">▸ Calendario</a></li><li><a href="allenamenti.html">▸ Orari Allenamenti</a></li><li><a href="notizie.html">▸ Notizie</a></li></ul></div>
+        <div class="footer-col"><h4>Categorie</h4><ul><li><a href="squadre.html">▸ Prima Squadra</a></li><li><a href="squadre.html">▸ Juniores</a></li><li><a href="squadre.html">▸ Allievi</a></li><li><a href="squadre.html">▸ Giovanissimi</a></li><li><a href="squadre.html">▸ Esordienti</a></li><li><a href="squadre.html">▸ Pulcini</a></li></ul></div>
+        <div class="footer-col"><h4>Contatti</h4><div class="footer-contact-item"><span class="icon">📍</span><span>[Indirizzo]</span></div><div class="footer-contact-item"><span class="icon">📞</span><span>[Telefono]</span></div><div class="footer-contact-item"><span class="icon">✉️</span><span>[Email]</span></div><div class="footer-contact-item"><span class="icon">🕐</span><span>[Orari]</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span class="current-year"></span> U.S. Sporting Arno 1979 — Tutti i diritti riservati</span><span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Cookie Policy</a></span></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/[NUMERO]" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+  <button id="backToTop" aria-label="Torna in cima">↑</button>
+  <script src="js/ticker.js"></script><script src="js/menu.js"></script><script src="js/main.js"></script>
+</body>
+</html>

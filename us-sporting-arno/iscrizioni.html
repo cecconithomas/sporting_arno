@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Iscrizioni online U.S. Sporting Arno 1979 — Iscriviti alla nostra scuola calcio o alle categorie agonistiche.">
+  <title>Iscrizioni Online — U.S. Sporting Arno 1979</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .steps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin:40px 0; }
+    .step-card { text-align:center; padding:28px 20px; }
+    .step-number { width:52px; height:52px; border-radius:50%; background:var(--color-primary); color:var(--color-black); font-size:1.3rem; font-weight:900; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
+    .step-card h3 { font-size:0.9rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; color:var(--color-dark); }
+    .step-card p { font-size:0.82rem; color:var(--color-text-light); line-height:1.6; }
+    .fee-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:40px 0; }
+    .fee-card { background:#fff; border-radius:var(--radius); box-shadow:var(--shadow-dark); padding:28px 24px; text-align:center; transition:var(--transition); border:2px solid transparent; }
+    .fee-card:hover, .fee-card.featured { border-color:var(--color-primary); transform:translateY(-4px); }
+    .fee-card.featured { position:relative; }
+    .fee-badge-top { position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--color-primary); color:var(--color-black); font-size:0.7rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; padding:4px 14px; border-radius:50px; white-space:nowrap; }
+    .fee-category { font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:2px; color:var(--color-primary-dark); margin-bottom:8px; }
+    .fee-name { font-size:1.1rem; font-weight:900; color:var(--color-dark); margin-bottom:4px; }
+    .fee-age { font-size:0.82rem; color:var(--color-text-light); margin-bottom:20px; }
+    .fee-price { font-size:2.2rem; font-weight:900; color:var(--color-dark); margin-bottom:4px; }
+    .fee-price span { font-size:1rem; font-weight:600; color:var(--color-text-light); }
+    .fee-note { font-size:0.78rem; color:var(--color-text-light); margin-bottom:20px; }
+    .fee-features { list-style:none; text-align:left; margin-bottom:24px; }
+    .fee-features li { font-size:0.82rem; padding:6px 0; border-bottom:1px solid var(--color-gray); display:flex; align-items:center; gap:8px; }
+    .fee-features li:last-child { border-bottom:none; }
+    .fee-features li::before { content:'✓'; color:var(--color-primary-dark); font-weight:800; }
+    .docs-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px; }
+    .doc-item { display:flex; align-items:flex-start; gap:12px; padding:14px 16px; background:var(--color-light); border-radius:var(--radius-sm); }
+    .doc-icon { font-size:1.5rem; flex-shrink:0; }
+    .doc-name { font-weight:700; font-size:0.88rem; color:var(--color-dark); }
+    .doc-note { font-size:0.78rem; color:var(--color-text-light); margin-top:2px; }
+    @media(max-width:900px){ .steps-grid{grid-template-columns:repeat(2,1fr);} .fee-grid{grid-template-columns:1fr;} .docs-grid{grid-template-columns:1fr;} }
+    @media(max-width:480px){ .steps-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+
+  <div class="ticker-wrap" role="marquee"><div class="ticker-inner"><div class="ticker-label">⚽ NEWS</div><div class="ticker-scroll"><div class="ticker-content"></div></div></div></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo"><img src="images/logo.png" alt="U.S. Sporting Arno 1979 Logo"><div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div></a>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="societa.html">La Società</a></li><li><a href="squadre.html">Squadre</a></li>
+          <li><a href="calendario.html">Calendario</a></li><li><a href="allenamenti.html">Allenamenti</a></li>
+          <li><a href="notizie.html">Notizie</a></li><li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta"><a href="iscrizioni.html" class="btn-cta">Iscrizioni Online</a></div>
+      <button class="hamburger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" role="navigation">
+    <a href="index.html">🏠 Home</a><a href="societa.html">🏟️ La Società</a><a href="squadre.html">👥 Squadre</a>
+    <a href="calendario.html">📅 Calendario</a><a href="allenamenti.html">⏰ Allenamenti</a>
+    <a href="notizie.html">📰 Notizie</a><a href="contatti.html">📞 Contatti</a>
+    <a href="iscrizioni.html" class="btn-cta-mobile">⚽ Iscrizioni Online</a>
+  </nav>
+
+  <main role="main">
+    <div class="page-hero">
+      <div class="container">
+        <h1>Iscrizioni <span>Online</span></h1>
+        <p>Iscriviti alla U.S. Sporting Arno per la stagione sportiva <span class="current-year"></span>/<span id="nextYear"></span></p>
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Iscrizioni</span></nav>
+      </div>
+    </div>
+
+    <!-- COME ISCRIVERSI -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title title-underline">Come <span>iscriversi</span></h2>
+          <p class="section-subtitle">Segui questi semplici passaggi per unirti alla famiglia Sporting Arno</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card fade-in">
+            <div class="step-number">1</div>
+            <h3>Compila il modulo</h3>
+            <p>Inserisci i tuoi dati nel form qui sotto oppure passa direttamente in segreteria.</p>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-number">2</div>
+            <h3>Vieni contattato</h3>
+            <p>Il nostro staff ti ricontatterà entro 48 ore per confermare l'iscrizione.</p>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-number">3</div>
+            <h3>Porta i documenti</h3>
+            <p>Porta in segreteria i documenti richiesti e completa la procedura di iscrizione.</p>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-number">4</div>
+            <h3>Inizia ad allenarti!</h3>
+            <p>Una volta completata l'iscrizione sei pronto per scendere in campo con noi!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE DI ISCRIZIONE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title title-underline">Quote di <span>iscrizione</span></h2>
+          <p class="section-subtitle">Prezzi indicativi per la stagione corrente — per info precise contattaci</p>
+        </div>
+        <div class="fee-grid">
+          <div class="fee-card fade-in">
+            <p class="fee-category">Settore Giovanile</p>
+            <h3 class="fee-name">Pulcini &amp; Piccoli Amici</h3>
+            <p class="fee-age">Dai [X] anni in su</p>
+            <div class="fee-price">€ [XXX]<span>/anno</span></div>
+            <p class="fee-note">[+ eventuale quota tessera FIGC]</p>
+            <ul class="fee-features">
+              <li>Allenamenti [N] volte a settimana</li>
+              <li>Kit da allenamento incluso</li>
+              <li>Tesseramento federale</li>
+              <li>Assicurazione sportiva</li>
+              <li>[Altro incluso]</li>
+            </ul>
+            <a href="#form-iscrizione" class="btn btn-primary" style="width:100%; justify-content:center;">Iscriviti ora</a>
+          </div>
+
+          <div class="fee-card featured fade-in">
+            <span class="fee-badge-top">⭐ Più richiesto</span>
+            <p class="fee-category">Settore Giovanile</p>
+            <h3 class="fee-name">Esordienti / Giovanissimi / Allievi</h3>
+            <p class="fee-age">[X]–[Y] anni</p>
+            <div class="fee-price">€ [XXX]<span>/anno</span></div>
+            <p class="fee-note">[+ eventuale quota tessera FIGC]</p>
+            <ul class="fee-features">
+              <li>Allenamenti [N] volte a settimana</li>
+              <li>Kit completo (maglia, pantaloncino, calzettoni)</li>
+              <li>Tesseramento FIGC</li>
+              <li>Assicurazione sportiva</li>
+              <li>Accesso a tutte le partite</li>
+              <li>[Altro incluso]</li>
+            </ul>
+            <a href="#form-iscrizione" class="btn btn-primary" style="width:100%; justify-content:center;">Iscriviti ora</a>
+          </div>
+
+          <div class="fee-card fade-in">
+            <p class="fee-category">Agonistica</p>
+            <h3 class="fee-name">Juniores &amp; Prima Squadra</h3>
+            <p class="fee-age">[X] anni in su</p>
+            <div class="fee-price">€ [XXX]<span>/anno</span></div>
+            <p class="fee-note">[+ quota tessera federale]</p>
+            <ul class="fee-features">
+              <li>Allenamenti [N] volte a settimana</li>
+              <li>Kit ufficiale da gara</li>
+              <li>Tesseramento federale</li>
+              <li>Assicurazione sportiva</li>
+              <li>Accesso agli spogliatoi e strutture</li>
+              <li>[Altro incluso]</li>
+            </ul>
+            <a href="#form-iscrizione" class="btn btn-primary" style="width:100%; justify-content:center;">Iscriviti ora</a>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:0.82rem; color:var(--color-text-light); margin-top:16px;">Le quote indicate sono indicative e possono variare. Contattaci per informazioni precise e aggiornate.</p>
+      </div>
+    </section>
+
+    <!-- DOCUMENTI NECESSARI -->
+    <section class="section section-alt">
+      <div class="container">
+        <div style="max-width:800px; margin:0 auto;">
+          <div class="section-header">
+            <h2 class="section-title title-underline">Documenti <span>necessari</span></h2>
+            <p class="section-subtitle">Porta questi documenti in segreteria al momento dell'iscrizione</p>
+          </div>
+          <div class="docs-grid fade-in">
+            <div class="doc-item"><span class="doc-icon">📄</span><div><p class="doc-name">Documento d'identità</p><p class="doc-note">Carta d'identità o passaporto in corso di validità (del genitore per minorenni)</p></div></div>
+            <div class="doc-item"><span class="doc-icon">💳</span><div><p class="doc-name">Codice fiscale</p><p class="doc-note">Tesserino codice fiscale o documento che lo riporti</p></div></div>
+            <div class="doc-item"><span class="doc-icon">🏥</span><div><p class="doc-name">Certificato medico sportivo</p><p class="doc-note">Certificato di idoneità agonistica o non agonistica (secondo categoria)</p></div></div>
+            <div class="doc-item"><span class="doc-icon">📸</span><div><p class="doc-name">Foto tessera</p><p class="doc-note">2 foto formato tessera recenti su sfondo bianco</p></div></div>
+            <div class="doc-item"><span class="doc-icon">📋</span><div><p class="doc-name">Modulo di iscrizione</p><p class="doc-note">Compilato e firmato (scaricabile qui sotto o disponibile in segreteria)</p></div></div>
+            <div class="doc-item"><span class="doc-icon">💰</span><div><p class="doc-name">Quota di iscrizione</p><p class="doc-note">Pagamento della quota annuale (modalità: [contanti / bonifico / etc.])</p></div></div>
+          </div>
+          <div style="text-align:center; margin-top:32px;">
+            <a href="#" class="btn btn-dark">📥 Scarica modulo iscrizione PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULO ONLINE -->
+    <section class="section" id="form-iscrizione">
+      <div class="container">
+        <div style="max-width:750px; margin:0 auto;">
+          <div class="section-header">
+            <h2 class="section-title title-underline">Modulo di <span>pre-iscrizione</span></h2>
+            <p class="section-subtitle">Compila il modulo — il nostro staff ti contatterà per completare l'iscrizione</p>
+          </div>
+
+          <div style="background:#fff; border-radius:var(--radius); box-shadow:var(--shadow-dark); padding:40px 36px;" class="fade-in">
+            <form id="registrationForm" novalidate>
+
+              <h3 style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--color-primary-deeper); margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid var(--color-primary);">👤 Dati del giocatore</h3>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="giocatore-nome">Nome *</label>
+                  <input type="text" id="giocatore-nome" name="giocatore-nome" class="form-control" placeholder="Nome del giocatore" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="giocatore-cognome">Cognome *</label>
+                  <input type="text" id="giocatore-cognome" name="giocatore-cognome" class="form-control" placeholder="Cognome del giocatore" required>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="data-nascita">Data di nascita *</label>
+                  <input type="date" id="data-nascita" name="data-nascita" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="luogo-nascita">Luogo di nascita</label>
+                  <input type="text" id="luogo-nascita" name="luogo-nascita" class="form-control" placeholder="Città di nascita">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="categoria">Categoria richiesta *</label>
+                <select id="categoria" name="categoria" class="form-control" required>
+                  <option value="" disabled selected>Seleziona la categoria</option>
+                  <option value="prima-squadra">Prima Squadra</option>
+                  <option value="juniores">Juniores</option>
+                  <option value="allievi">Allievi</option>
+                  <option value="giovanissimi">Giovanissimi</option>
+                  <option value="esordienti">Esordienti</option>
+                  <option value="pulcini">Pulcini</option>
+                  <option value="piccoli-amici">Piccoli Amici</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ruolo">Ruolo preferito</label>
+                <select id="ruolo" name="ruolo" class="form-control">
+                  <option value="" disabled selected>Seleziona il ruolo</option>
+                  <option value="portiere">Portiere</option>
+                  <option value="difensore">Difensore</option>
+                  <option value="centrocampista">Centrocampista</option>
+                  <option value="attaccante">Attaccante</option>
+                  <option value="non-so">Non lo so ancora</option>
+                </select>
+              </div>
+
+              <h3 style="font-size:0.85rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--color-primary-deeper); margin:28px 0 20px; padding-bottom:10px; border-bottom:2px solid var(--color-primary);">👨‍👩‍👧 Dati del genitore / tutore (per minorenni)</h3>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="genitore-nome">Nome genitore *</label>
+                  <input type="text" id="genitore-nome" name="genitore-nome" class="form-control" placeholder="Nome del genitore/tutore" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="genitore-cognome">Cognome genitore *</label>
+                  <input type="text" id="genitore-cognome" name="genitore-cognome" class="form-control" placeholder="Cognome del genitore/tutore" required>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="genitore-tel">Telefono *</label>
+                  <input type="tel" id="genitore-tel" name="genitore-tel" class="form-control" placeholder="+39 000 0000000" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="genitore-email">Email *</label>
+                  <input type="email" id="genitore-email" name="genitore-email" class="form-control" placeholder="email@esempio.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="note">Note aggiuntive</label>
+                <textarea id="note" name="note" class="form-control" style="min-height:90px;" placeholder="Eventuali informazioni aggiuntive (es. esperienze calcistiche precedenti, aspettative, ecc.)"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:0.82rem; color:var(--color-text-light);">
+                  <input type="checkbox" name="privacy-reg" required style="margin-top:3px; accent-color:var(--color-primary);">
+                  <span>Ho letto e accetto la <a href="#" style="color:var(--color-primary-dark); font-weight:700;">Privacy Policy</a> e autorizzo il trattamento dei dati personali ai sensi del GDPR *</span>
+                </label>
+              </div>
+
+              <div class="form-group" style="margin-bottom:0;">
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:0.82rem; color:var(--color-text-light);">
+                  <input type="checkbox" name="foto-consenso" style="margin-top:3px; accent-color:var(--color-primary);">
+                  <span>Autorizzo la pubblicazione di foto/video del giocatore sui canali social e sul sito della società</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center; margin-top:28px;">
+                ⚽ Invia richiesta di iscrizione
+              </button>
+              <p class="form-note" style="text-align:center; margin-top:12px;">* Campi obbligatori — Sarai contattato entro 48 ore lavorative</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div style="max-width:700px; margin:0 auto;">
+          <div class="section-header">
+            <h2 class="section-title title-underline">Domande <span>frequenti</span></h2>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:16px; margin-top:32px;" class="fade-in">
+            <details style="background:#fff; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); padding:18px 22px; cursor:pointer;">
+              <summary style="font-weight:800; font-size:0.92rem; color:var(--color-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                Da che età si può iscrivere un bambino? <span style="color:var(--color-primary-dark);">+</span>
+              </summary>
+              <p style="margin-top:12px; font-size:0.88rem; color:var(--color-text-light); line-height:1.7;">[Risposta: descrivi l'età minima di accesso alla scuola calcio e alle varie categorie.]</p>
+            </details>
+            <details style="background:#fff; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); padding:18px 22px; cursor:pointer;">
+              <summary style="font-weight:800; font-size:0.92rem; color:var(--color-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                Quando si apre la campagna iscrizioni? <span style="color:var(--color-primary-dark);">+</span>
+              </summary>
+              <p style="margin-top:12px; font-size:0.88rem; color:var(--color-text-light); line-height:1.7;">[Risposta: indica quando apre la campagna iscrizioni per la nuova stagione.]</p>
+            </details>
+            <details style="background:#fff; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); padding:18px 22px; cursor:pointer;">
+              <summary style="font-weight:800; font-size:0.92rem; color:var(--color-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                La quota comprende il kit da gioco? <span style="color:var(--color-primary-dark);">+</span>
+              </summary>
+              <p style="margin-top:12px; font-size:0.88rem; color:var(--color-text-light); line-height:1.7;">[Risposta: descrivi cosa è incluso nella quota di iscrizione (kit, assicurazione, ecc.).]</p>
+            </details>
+            <details style="background:#fff; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); padding:18px 22px; cursor:pointer;">
+              <summary style="font-weight:800; font-size:0.92rem; color:var(--color-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                Come funziona il certificato medico? <span style="color:var(--color-primary-dark);">+</span>
+              </summary>
+              <p style="margin-top:12px; font-size:0.88rem; color:var(--color-text-light); line-height:1.7;">[Risposta: spiega la differenza tra certificato agonistico e non agonistico e quale serve per quale categoria.]</p>
+            </details>
+            <details style="background:#fff; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm); padding:18px 22px; cursor:pointer;">
+              <summary style="font-weight:800; font-size:0.92rem; color:var(--color-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+                Posso fare un provino prima di iscrivermi? <span style="color:var(--color-primary-dark);">+</span>
+              </summary>
+              <p style="margin-top:12px; font-size:0.88rem; color:var(--color-text-light); line-height:1.7;">[Risposta: descrivi la possibilità di fare una prova gratuita prima di iscriversi.]</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><div class="footer-logo"><img src="images/logo.png" alt="U.S. Sporting Arno 1979"><div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div></div><p>[Descrizione società.]</p><div class="footer-social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="WhatsApp">💬</a></div></div>
+        <div class="footer-col"><h4>Sezioni</h4><ul><li><a href="index.html">▸ Home</a></li><li><a href="societa.html">▸ La Società</a></li><li><a href="squadre.html">▸ Squadre</a></li><li><a href="calendario.html">▸ Calendario</a></li><li><a href="allenamenti.html">▸ Orari Allenamenti</a></li><li><a href="notizie.html">▸ Notizie</a></li></ul></div>
+        <div class="footer-col"><h4>Categorie</h4><ul><li><a href="squadre.html">▸ Prima Squadra</a></li><li><a href="squadre.html">▸ Juniores</a></li><li><a href="squadre.html">▸ Allievi</a></li><li><a href="squadre.html">▸ Giovanissimi</a></li><li><a href="squadre.html">▸ Esordienti</a></li><li><a href="squadre.html">▸ Pulcini</a></li></ul></div>
+        <div class="footer-col"><h4>Contatti</h4><div class="footer-contact-item"><span class="icon">📍</span><span>[Indirizzo]</span></div><div class="footer-contact-item"><span class="icon">📞</span><span>[Telefono]</span></div><div class="footer-contact-item"><span class="icon">✉️</span><span>[Email]</span></div><div class="footer-contact-item"><span class="icon">🕐</span><span>[Orari]</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span class="current-year"></span> U.S. Sporting Arno 1979 — Tutti i diritti riservati</span><span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Cookie Policy</a></span></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/[NUMERO]" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+  <button id="backToTop" aria-label="Torna in cima">↑</button>
+  <script src="js/ticker.js"></script><script src="js/menu.js"></script><script src="js/main.js"></script>
+  <script>
+    // Anno successivo nella pagina iscrizioni
+    document.getElementById('nextYear').textContent = new Date().getFullYear() + 1;
+  </script>
+</body>
+</html>

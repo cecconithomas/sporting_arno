@@ -1,0 +1,124 @@
+/* ============================================================
+   U.S. SPORTING ARNO 1979 — responsive.css
+   ============================================================ */
+
+/* ===================== TABLET (≤ 1024px) ===================== */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .about-grid {
+    gap: 40px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ===================== MENU HAMBURGER (≤ 900px) ===================== */
+@media (max-width: 900px) {
+  .main-nav  { display: none; }
+  .header-cta .btn-cta { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* ===================== TABLET PICCOLO (≤ 768px) ===================== */
+@media (max-width: 768px) {
+  :root { --max-width: 100%; }
+
+  .section { padding: 60px 0; }
+
+  /* Hero */
+  .hero {
+    height: clamp(400px, 60vh, 560px);
+  }
+  .hero h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+  .hero p  { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-image-main,
+  .about-image-placeholder { height: 300px; }
+  .about-badge { width: 88px; height: 88px; bottom: -16px; right: -8px; }
+  .about-badge strong { font-size: 1.4rem; }
+  .about-features { grid-template-columns: 1fr; }
+
+  /* Cards */
+  .cards-grid { grid-template-columns: 1fr; }
+  .teams-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Tabella */
+  table { font-size: 0.82rem; }
+  thead th, tbody td { padding: 10px 12px; }
+
+  /* Form */
+  .form-grid { grid-template-columns: 1fr; gap: 0; }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Schedule */
+  .schedule-grid { grid-template-columns: 1fr; }
+
+  /* Page hero */
+  .page-hero { padding: 50px 0 40px; }
+  .page-hero h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+}
+
+/* ===================== MOBILE (≤ 480px) ===================== */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+
+  .header-inner { height: 65px; }
+  .site-logo img { height: 46px; }
+  .logo-text { display: none; }
+  .mobile-nav { top: 65px; }
+
+  .hero { height: 80vmin; }
+  .hero h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+
+  .teams-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  .section-title { font-size: 1.4rem; }
+
+  .btn-lg { padding: 13px 28px; font-size: 0.88rem; }
+
+  .ticker-label { padding: 0 10px; font-size: 0.65rem; }
+  .ticker-item  { font-size: 0.76rem; margin-right: 40px; }
+
+  #backToTop   { bottom: 20px; right: 20px; }
+  .whatsapp-float { bottom: 72px; right: 20px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ===================== PRINT ===================== */
+@media print {
+  .ticker-wrap, .site-header, .hamburger, .mobile-nav,
+  .whatsapp-float, #backToTop, .hero-buttons { display: none !important; }
+  body { font-size: 12pt; }
+  .hero { height: auto; padding: 20pt 0; }
+  .hero-overlay { position: static; }
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="U.S. Sporting Arno 1979 — Società sportiva calcistica. Scuola calcio e squadre per tutte le categorie.">
+  <meta name="keywords" content="Sporting Arno, calcio, scuola calcio, squadra calcio, 1979">
+  <title>Home — U.S. Sporting Arno 1979</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============ TICKER ============ -->
+  <div class="ticker-wrap" role="marquee" aria-label="Notizie in evidenza">
+    <div class="ticker-inner">
+      <div class="ticker-label">⚽ NEWS</div>
+      <div class="ticker-scroll">
+        <div class="ticker-content"><!-- popolato da ticker.js --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="U.S. Sporting Arno - Home">
+        <img src="images/logo.png" alt="U.S. Sporting Arno 1979 Logo">
+        <div class="logo-text">
+          <span class="logo-name">U.S. Sporting Arno</span>
+          Fondata nel 1979
+        </div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="societa.html">La Società</a></li>
+          <li><a href="squadre.html">Squadre</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="allenamenti.html">Allenamenti</a></li>
+          <li><a href="notizie.html">Notizie</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="iscrizioni.html" class="btn-cta">Iscrizioni Online</a>
+      </div>
+
+      <button class="hamburger" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <nav class="mobile-nav" role="navigation" aria-label="Menu mobile">
+    <a href="index.html">🏠 Home</a>
+    <a href="societa.html">🏟️ La Società</a>
+    <a href="squadre.html">👥 Squadre</a>
+    <a href="calendario.html">📅 Calendario</a>
+    <a href="allenamenti.html">⏰ Allenamenti</a>
+    <a href="notizie.html">📰 Notizie</a>
+    <a href="contatti.html">📞 Contatti</a>
+    <a href="iscrizioni.html" class="btn-cta-mobile">⚽ Iscrizioni Online</a>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main role="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Immagine principale">
+      <!-- 💡 Sostituisci con: <img src="images/hero-home.jpg" alt="Campo di calcio" class="hero-bg"> -->
+      <div class="hero-placeholder">
+        <div class="hero-placeholder-label">📸 Inserire immagine principale<br>(hero-home.jpg — consigliato 1920×680px)</div>
+      </div>
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-badge">⚽ Fondata nel 1979</span>
+            <h1>Benvenuti alla<br><em>U.S. Sporting Arno</em></h1>
+            <p>Passione, sacrificio e fair play. Da oltre 45 anni formiamo atleti e persone sul territorio.</p>
+            <div class="hero-buttons">
+              <a href="iscrizioni.html" class="btn btn-primary btn-lg">Iscriviti ora</a>
+              <a href="societa.html" class="btn btn-outline-white btn-lg">Chi siamo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span>↓</span>Scopri</div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section" aria-label="I nostri numeri">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-target="46">46</span>
+            <span class="stat-label">Anni di storia</span>
+          </div>
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-target="150">150</span>
+            <span class="stat-label">Giovani atleti</span>
+          </div>
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-target="8">8</span>
+            <span class="stat-label">Squadre attive</span>
+          </div>
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-target="30">30</span>
+            <span class="stat-label">Titoli conquistati</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTIZIE IN EVIDENZA -->
+    <section class="section" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title title-underline" id="news-title">Ultime <span>Notizie</span></h2>
+          <p class="section-subtitle">Resta aggiornato su tutto quello che succede nel mondo della U.S. Sporting Arno</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <article class="card fade-in">
+            <div class="card-image">
+              <!-- 💡 <img src="images/news-1.jpg" alt="Titolo notizia" class="lightbox-trigger"> -->
+              <div class="card-image-placeholder">📰</div>
+              <span class="badge badge-primary">Comunicato</span>
+            </div>
+            <div class="card-body">
+              <p class="card-date">📅 [Data notizia]</p>
+              <h3 class="card-title"><a href="notizie.html">[Titolo della prima notizia]</a></h3>
+              <p class="card-excerpt">[Breve descrizione della notizia. Inserisci qui il testo che vuoi mostrare in anteprima sulla home page.]</p>
+              <a href="notizie.html" class="card-link">Leggi tutto →</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card fade-in">
+            <div class="card-image">
+              <div class="card-image-placeholder">🏆</div>
+              <span class="badge badge-dark">Risultati</span>
+            </div>
+            <div class="card-body">
+              <p class="card-date">📅 [Data notizia]</p>
+              <h3 class="card-title"><a href="notizie.html">[Titolo della seconda notizia]</a></h3>
+              <p class="card-excerpt">[Breve descrizione della notizia. Inserisci qui il testo che vuoi mostrare in anteprima sulla home page.]</p>
+              <a href="notizie.html" class="card-link">Leggi tutto →</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card fade-in">
+            <div class="card-image">
+              <div class="card-image-placeholder">⚽</div>
+              <span class="badge badge-accent">Evento</span>
+            </div>
+            <div class="card-body">
+              <p class="card-date">📅 [Data notizia]</p>
+              <h3 class="card-title"><a href="notizie.html">[Titolo della terza notizia]</a></h3>
+              <p class="card-excerpt">[Breve descrizione della notizia. Inserisci qui il testo che vuoi mostrare in anteprima sulla home page.]</p>
+              <a href="notizie.html" class="card-link">Leggi tutto →</a>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top:40px;">
+          <a href="notizie.html" class="btn btn-dark">Tutte le notizie</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SIAMO -->
+    <section class="section section-alt" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <!-- 💡 <img src="images/about-home.jpg" alt="La squadra" class="about-image-main lightbox-trigger"> -->
+            <div class="about-image-placeholder">
+              <span class="icon">🏟️</span>
+              <p>Inserire foto squadra / campo<br>(about-home.jpg)</p>
+            </div>
+            <div class="about-badge">
+              <strong>1979</strong>
+              Anno di<br>fondazione
+            </div>
+          </div>
+          <div class="about-text fade-in">
+            <span class="badge badge-primary" style="margin-bottom:16px">Chi siamo</span>
+            <h2 class="section-title" id="about-title">La nostra <span>storia</span></h2>
+            <p class="section-subtitle">[Inserisci qui una breve presentazione della società. Racconta la storia, i valori e la missione della U.S. Sporting Arno.]</p>
+            <div class="about-features">
+              <div class="about-feature">
+                <div class="icon-wrap">⚽</div>
+                <div>
+                  <h4>Calcio per tutti</h4>
+                  <p>[Descrizione breve]</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="icon-wrap">🏆</div>
+                <div>
+                  <h4>Risultati sportivi</h4>
+                  <p>[Descrizione breve]</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="icon-wrap">👶</div>
+                <div>
+                  <h4>Settore giovanile</h4>
+                  <p>[Descrizione breve]</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="icon-wrap">🤝</div>
+                <div>
+                  <h4>Valori e fair play</h4>
+                  <p>[Descrizione breve]</p>
+                </div>
+              </div>
+            </div>
+            <a href="societa.html" class="btn btn-primary">Scopri la società</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LE NOSTRE SQUADRE -->
+    <section class="section" aria-labelledby="teams-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title title-underline" id="teams-title">Le nostre <span>Squadre</span></h2>
+          <p class="section-subtitle">Categorie per ogni età e livello, dalla scuola calcio alla prima squadra</p>
+        </div>
+
+        <div class="teams-grid">
+          <div class="team-card fade-in">
+            <div class="team-card-image">
+              <div class="team-card-image-placeholder"><span class="icon">🥇</span><p>Foto squadra</p></div>
+            </div>
+            <div class="team-card-body">
+              <p class="team-category">Prima Squadra</p>
+              <h3 class="team-name">U.S. Sporting Arno</h3>
+              <p class="team-coach">Mister: [Nome Allenatore]</p>
+              <a href="squadre.html" class="btn btn-sm btn-primary">Scheda squadra</a>
+            </div>
+          </div>
+
+          <div class="team-card fade-in">
+            <div class="team-card-image">
+              <div class="team-card-image-placeholder"><span class="icon">⚽</span><p>Foto squadra</p></div>
+            </div>
+            <div class="team-card-body">
+              <p class="team-category">Categoria Juniores</p>
+              <h3 class="team-name">Juniores</h3>
+              <p class="team-coach">Mister: [Nome Allenatore]</p>
+              <a href="squadre.html" class="btn btn-sm btn-primary">Scheda squadra</a>
+            </div>
+          </div>
+
+          <div class="team-card fade-in">
+            <div class="team-card-image">
+              <div class="team-card-image-placeholder"><span class="icon">🏃</span><p>Foto squadra</p></div>
+            </div>
+            <div class="team-card-body">
+              <p class="team-category">Categoria Allievi</p>
+              <h3 class="team-name">Allievi</h3>
+              <p class="team-coach">Mister: [Nome Allenatore]</p>
+              <a href="squadre.html" class="btn btn-sm btn-primary">Scheda squadra</a>
+            </div>
+          </div>
+
+          <div class="team-card fade-in">
+            <div class="team-card-image">
+              <div class="team-card-image-placeholder"><span class="icon">👦</span><p>Foto squadra</p></div>
+            </div>
+            <div class="team-card-body">
+              <p class="team-category">Scuola Calcio</p>
+              <h3 class="team-name">Pulcini &amp; Piccoli Amici</h3>
+              <p class="team-coach">Mister: [Nome Allenatore]</p>
+              <a href="squadre.html" class="btn btn-sm btn-primary">Scheda squadra</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:40px;">
+          <a href="squadre.html" class="btn btn-dark">Vedi tutte le squadre</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROSSIMA PARTITA -->
+    <section class="section section-dark" aria-labelledby="match-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="match-title" style="color:#fff">Prossima <span>Partita</span></h2>
+        </div>
+        <div style="max-width:600px; margin:0 auto; text-align:center; background:rgba(255,255,255,0.05); border-radius:16px; padding:40px 32px; border:1px solid rgba(252,142,216,0.2);">
+          <p style="color:rgba(255,255,255,0.5); font-size:0.8rem; text-transform:uppercase; letter-spacing:2px; margin-bottom:8px;">[Campionato / Coppa]</p>
+          <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:24px;">📅 [Data] — 🕐 [Ora] — 📍 [Campo]</p>
+          <div style="display:flex; align-items:center; justify-content:center; gap:24px; flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div style="width:80px; height:80px; background:rgba(252,142,216,0.15); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 8px; font-size:2rem;">🏠</div>
+              <p style="color:#fff; font-weight:800; font-size:1rem;">U.S. Sporting Arno</p>
+            </div>
+            <div style="font-size:2rem; font-weight:900; color:var(--color-primary);">VS</div>
+            <div style="text-align:center;">
+              <div style="width:80px; height:80px; background:rgba(255,255,255,0.07); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 8px; font-size:2rem;">⚽</div>
+              <p style="color:#fff; font-weight:800; font-size:1rem;">[Nome Avversario]</p>
+            </div>
+          </div>
+          <div style="margin-top:32px;">
+            <a href="calendario.html" class="btn btn-primary">Vedi calendario completo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL CTA -->
+    <div class="social-bar">
+      <div class="container">
+        <h2>Seguici sui Social</h2>
+        <p>Aggiornamenti in tempo reale, foto, video e molto altro</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Facebook" title="Facebook">f</a>
+          <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">📷</a>
+          <a href="#" class="social-icon" aria-label="YouTube" title="YouTube">▶</a>
+          <a href="#" class="social-icon" aria-label="WhatsApp" title="WhatsApp">💬</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPONSOR -->
+    <section class="sponsors-section" aria-label="I nostri sponsor">
+      <div class="container">
+        <p class="sponsors-title">I nostri sponsor &amp; partner</p>
+        <div class="sponsors-row">
+          <div class="sponsor-item">Logo Sponsor 1<br><small>(inserire immagine)</small></div>
+          <div class="sponsor-item">Logo Sponsor 2<br><small>(inserire immagine)</small></div>
+          <div class="sponsor-item">Logo Sponsor 3<br><small>(inserire immagine)</small></div>
+          <div class="sponsor-item">Logo Sponsor 4<br><small>(inserire immagine)</small></div>
+          <div class="sponsor-item">Logo Sponsor 5<br><small>(inserire immagine)</small></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="U.S. Sporting Arno 1979">
+            <div class="logo-text">
+              <span class="logo-name">U.S. Sporting Arno</span>
+              Fondata nel 1979
+            </div>
+          </div>
+          <p>[Breve descrizione della società da inserire qui. Valori, missione e territorio di appartenenza.]</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sezioni</h4>
+          <ul>
+            <li><a href="index.html">▸ Home</a></li>
+            <li><a href="societa.html">▸ La Società</a></li>
+            <li><a href="squadre.html">▸ Squadre</a></li>
+            <li><a href="calendario.html">▸ Calendario</a></li>
+            <li><a href="allenamenti.html">▸ Orari Allenamenti</a></li>
+            <li><a href="notizie.html">▸ Notizie</a></li>
+            <li><a href="contatti.html">▸ Contatti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categorie</h4>
+          <ul>
+            <li><a href="squadre.html">▸ Prima Squadra</a></li>
+            <li><a href="squadre.html">▸ Juniores</a></li>
+            <li><a href="squadre.html">▸ Allievi</a></li>
+            <li><a href="squadre.html">▸ Giovanissimi</a></li>
+            <li><a href="squadre.html">▸ Esordienti</a></li>
+            <li><a href="squadre.html">▸ Pulcini</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <div class="footer-contact-item">
+            <span class="icon">📍</span>
+            <span>[Via e numero civico, Città]</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">📞</span>
+            <span><a href="tel:[numero]">[Numero di telefono]</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">✉️</span>
+            <span><a href="mailto:[email]">[Email segreteria]</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">🕐</span>
+            <span>[Orari segreteria]</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span class="current-year"></span> U.S. Sporting Arno 1979 — Tutti i diritti riservati</span>
+        <span>
+          <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+          <a href="#">Cookie Policy</a> &nbsp;·&nbsp;
+          <a href="#">Note Legali</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/[NUMERO]" class="whatsapp-float" aria-label="Contattaci su WhatsApp" target="_blank" rel="noopener">💬</a>
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Torna in cima">↑</button>
+
+  <script src="js/ticker.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

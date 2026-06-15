@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calendario partite U.S. Sporting Arno 1979 — Risultati e prossime gare.">
+  <title>Calendario Partite — U.S. Sporting Arno 1979</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .filter-bar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px; align-items:center; }
+    .filter-label { font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--color-text-light); margin-right:4px; }
+    .filter-btn { padding:8px 18px; border-radius:50px; font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; cursor:pointer; transition:var(--transition); background:var(--color-gray); color:var(--color-dark); border:2px solid transparent; }
+    .filter-btn:hover, .filter-btn.active { background:var(--color-primary); border-color:var(--color-primary); color:var(--color-dark); }
+    .prossima-section { background:linear-gradient(135deg, var(--color-dark), #2a0a1e); border-radius:var(--radius); padding:32px 36px; margin-bottom:48px; color:#fff; }
+    .prossima-section h3 { font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:2px; color:var(--color-primary); margin-bottom:20px; }
+    .match-card { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .match-team { display:flex; align-items:center; gap:14px; }
+    .match-team-logo { width:52px; height:52px; background:rgba(255,255,255,0.08); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; }
+    .match-team-name { font-size:1rem; font-weight:800; color:#fff; }
+    .match-team-cat { font-size:0.75rem; color:rgba(255,255,255,0.5); }
+    .match-vs { font-size:1.8rem; font-weight:900; color:var(--color-primary); }
+    .match-info { text-align:center; }
+    .match-info .date { font-size:0.85rem; color:rgba(255,255,255,0.7); margin-bottom:4px; }
+    .match-info .comp { font-size:0.75rem; color:rgba(255,255,255,0.45); }
+    .table-section { margin-bottom:48px; }
+    .table-section h3 { font-size:1rem; font-weight:900; text-transform:uppercase; letter-spacing:1px; padding:14px 20px; background:var(--color-light2); border-radius:var(--radius-sm) var(--radius-sm) 0 0; color:var(--color-primary-deeper); border-bottom:2px solid var(--color-primary); margin-bottom:0; }
+    td .team-name-cell { font-weight:700; }
+    .match-home-cell { color:var(--color-primary-deeper); font-weight:800; }
+    .score-cell { font-weight:900; font-size:1rem; color:var(--color-dark); }
+    .upcoming-row td { color:var(--color-text-light); font-style:italic; }
+  </style>
+</head>
+<body>
+
+  <div class="ticker-wrap" role="marquee"><div class="ticker-inner"><div class="ticker-label">⚽ NEWS</div><div class="ticker-scroll"><div class="ticker-content"></div></div></div></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo"><img src="images/logo.png" alt="U.S. Sporting Arno 1979 Logo"><div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div></a>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="societa.html">La Società</a></li><li><a href="squadre.html">Squadre</a></li>
+          <li><a href="calendario.html" class="active">Calendario</a></li><li><a href="allenamenti.html">Allenamenti</a></li>
+          <li><a href="notizie.html">Notizie</a></li><li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta"><a href="iscrizioni.html" class="btn-cta">Iscrizioni Online</a></div>
+      <button class="hamburger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" role="navigation">
+    <a href="index.html">🏠 Home</a><a href="societa.html">🏟️ La Società</a><a href="squadre.html">👥 Squadre</a>
+    <a href="calendario.html">📅 Calendario</a><a href="allenamenti.html">⏰ Allenamenti</a>
+    <a href="notizie.html">📰 Notizie</a><a href="contatti.html">📞 Contatti</a>
+    <a href="iscrizioni.html" class="btn-cta-mobile">⚽ Iscrizioni Online</a>
+  </nav>
+
+  <main role="main">
+    <div class="page-hero">
+      <div class="container">
+        <h1>Calendario <span>Partite</span></h1>
+        <p>Risultati, prossime gare e programmazione stagionale</p>
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Calendario</span></nav>
+      </div>
+    </div>
+
+    <section class="section" aria-label="Calendario partite">
+      <div class="container">
+
+        <!-- PROSSIMA PARTITA -->
+        <div class="prossima-section fade-in">
+          <h3>⚡ Prossima Partita</h3>
+          <div class="match-card">
+            <div class="match-team">
+              <div class="match-team-logo"><img src="images/logo.png" alt="Sporting Arno" style="width:40px;height:40px;object-fit:contain;border-radius:50%;"></div>
+              <div><p class="match-team-name">U.S. Sporting Arno</p><p class="match-team-cat">Prima Squadra</p></div>
+            </div>
+            <div>
+              <div class="match-info"><p class="date">📅 [Data] · 🕐 [Ora]</p><p class="comp">[Campionato] · [Giornata n°X]</p><p style="font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:4px;">📍 [Campo / Città]</p></div>
+            </div>
+            <div class="match-vs">VS</div>
+            <div class="match-team" style="flex-direction:row-reverse; text-align:right;">
+              <div class="match-team-logo">⚽</div>
+              <div><p class="match-team-name">[Nome Avversario]</p><p class="match-team-cat">[Categoria avversario]</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILTRO SQUADRE -->
+        <div class="filter-bar" role="group" aria-label="Filtra per squadra">
+          <span class="filter-label">Filtra:</span>
+          <button class="filter-btn active" data-filter="all">Tutte le squadre</button>
+          <button class="filter-btn" data-filter="prima">Prima Squadra</button>
+          <button class="filter-btn" data-filter="juniores">Juniores</button>
+          <button class="filter-btn" data-filter="allievi">Allievi</button>
+          <button class="filter-btn" data-filter="giovanissimi">Giovanissimi</button>
+          <button class="filter-btn" data-filter="esordienti">Esordienti</button>
+        </div>
+
+        <!-- TABELLA PRIMA SQUADRA -->
+        <div class="table-section fade-in" id="prima-section">
+          <h3>🥇 Prima Squadra — [Campionato] [Anno/Anno]</h3>
+          <div class="table-wrap">
+            <table aria-label="Calendario Prima Squadra">
+              <thead>
+                <tr>
+                  <th>G.</th><th>Data</th><th>Ora</th><th>Casa</th><th>Ospite</th>
+                  <th>Risultato</th><th>Campo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-team="prima">
+                  <td>1</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td>
+                  <td class="match-home-cell">U.S. Sporting Arno</td><td>[Avversario]</td>
+                  <td><span class="match-result result-w">[R] - [R]</span></td><td>[Campo]</td>
+                </tr>
+                <tr data-team="prima">
+                  <td>2</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td>
+                  <td>[Avversario]</td><td class="match-home-cell">U.S. Sporting Arno</td>
+                  <td><span class="match-result result-d">[R] - [R]</span></td><td>[Campo]</td>
+                </tr>
+                <tr data-team="prima">
+                  <td>3</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td>
+                  <td class="match-home-cell">U.S. Sporting Arno</td><td>[Avversario]</td>
+                  <td><span class="match-result result-l">[R] - [R]</span></td><td>[Campo]</td>
+                </tr>
+                <tr data-team="prima" class="upcoming-row">
+                  <td>4</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td>
+                  <td>[Avversario]</td><td class="match-home-cell">U.S. Sporting Arno</td>
+                  <td><span class="match-result result-p">Da giocare</span></td><td>[Campo]</td>
+                </tr>
+                <tr data-team="prima" class="upcoming-row">
+                  <td>5</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td>
+                  <td class="match-home-cell">U.S. Sporting Arno</td><td>[Avversario]</td>
+                  <td><span class="match-result result-p">Da giocare</span></td><td>[Campo]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TABELLA JUNIORES -->
+        <div class="table-section fade-in">
+          <h3>⚽ Juniores — [Campionato] [Anno/Anno]</h3>
+          <div class="table-wrap">
+            <table aria-label="Calendario Juniores">
+              <thead><tr><th>G.</th><th>Data</th><th>Ora</th><th>Casa</th><th>Ospite</th><th>Risultato</th><th>Campo</th></tr></thead>
+              <tbody>
+                <tr data-team="juniores"><td>1</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td class="match-home-cell">U.S. Sporting Arno</td><td>[Avversario]</td><td><span class="match-result result-w">[R] - [R]</span></td><td>[Campo]</td></tr>
+                <tr data-team="juniores" class="upcoming-row"><td>2</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td>[Avversario]</td><td class="match-home-cell">U.S. Sporting Arno</td><td><span class="match-result result-p">Da giocare</span></td><td>[Campo]</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TABELLA ALLIEVI -->
+        <div class="table-section fade-in">
+          <h3>🏃 Allievi — [Campionato] [Anno/Anno]</h3>
+          <div class="table-wrap">
+            <table aria-label="Calendario Allievi">
+              <thead><tr><th>G.</th><th>Data</th><th>Ora</th><th>Casa</th><th>Ospite</th><th>Risultato</th><th>Campo</th></tr></thead>
+              <tbody>
+                <tr data-team="allievi"><td>1</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td class="match-home-cell">U.S. Sporting Arno</td><td>[Avversario]</td><td><span class="match-result result-d">[R] - [R]</span></td><td>[Campo]</td></tr>
+                <tr data-team="allievi" class="upcoming-row"><td>2</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td>[Avversario]</td><td class="match-home-cell">U.S. Sporting Arno</td><td><span class="match-result result-p">Da giocare</span></td><td>[Campo]</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TABELLA GIOVANISSIMI -->
+        <div class="table-section fade-in">
+          <h3>🌟 Giovanissimi — [Campionato] [Anno/Anno]</h3>
+          <div class="table-wrap">
+            <table aria-label="Calendario Giovanissimi">
+              <thead><tr><th>G.</th><th>Data</th><th>Ora</th><th>Casa</th><th>Ospite</th><th>Risultato</th><th>Campo</th></tr></thead>
+              <tbody>
+                <tr data-team="giovanissimi"><td>1</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td class="match-home-cell">U.S. Sporting Arno</td><td>[Avversario]</td><td><span class="match-result result-w">[R] - [R]</span></td><td>[Campo]</td></tr>
+                <tr data-team="giovanissimi" class="upcoming-row"><td>2</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td>[Avversario]</td><td class="match-home-cell">U.S. Sporting Arno</td><td><span class="match-result result-p">Da giocare</span></td><td>[Campo]</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TABELLA ESORDIENTI -->
+        <div class="table-section fade-in">
+          <h3>⭐ Esordienti — [Campionato] [Anno/Anno]</h3>
+          <div class="table-wrap">
+            <table aria-label="Calendario Esordienti">
+              <thead><tr><th>G.</th><th>Data</th><th>Ora</th><th>Casa</th><th>Ospite</th><th>Risultato</th><th>Campo</th></tr></thead>
+              <tbody>
+                <tr data-team="esordienti"><td>1</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td class="match-home-cell">U.S. Sporting Arno</td><td>[Avversario]</td><td><span class="match-result result-w">[R] - [R]</span></td><td>[Campo]</td></tr>
+                <tr data-team="esordienti" class="upcoming-row"><td>2</td><td>[gg/mm/aaaa]</td><td>[HH:MM]</td><td>[Avversario]</td><td class="match-home-cell">U.S. Sporting Arno</td><td><span class="match-result result-p">Da giocare</span></td><td>[Campo]</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- LEGENDA -->
+        <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:16px; font-size:0.8rem; color:var(--color-text-light);">
+          <span><span class="match-result result-w" style="font-size:0.72rem;">V</span> Vittoria</span>
+          <span><span class="match-result result-d" style="font-size:0.72rem;">P</span> Pareggio</span>
+          <span><span class="match-result result-l" style="font-size:0.72rem;">S</span> Sconfitta</span>
+          <span><span class="match-result result-p" style="font-size:0.72rem;">-</span> Da giocare</span>
+          <span style="margin-left:auto; color:var(--color-primary-deeper); font-weight:700;">🏠 Casa = in grassetto rosa</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><div class="footer-logo"><img src="images/logo.png" alt="U.S. Sporting Arno 1979"><div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div></div><p>[Breve descrizione della società.]</p><div class="footer-social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="WhatsApp">💬</a></div></div>
+        <div class="footer-col"><h4>Sezioni</h4><ul><li><a href="index.html">▸ Home</a></li><li><a href="societa.html">▸ La Società</a></li><li><a href="squadre.html">▸ Squadre</a></li><li><a href="calendario.html">▸ Calendario</a></li><li><a href="allenamenti.html">▸ Orari Allenamenti</a></li><li><a href="notizie.html">▸ Notizie</a></li></ul></div>
+        <div class="footer-col"><h4>Categorie</h4><ul><li><a href="squadre.html">▸ Prima Squadra</a></li><li><a href="squadre.html">▸ Juniores</a></li><li><a href="squadre.html">▸ Allievi</a></li><li><a href="squadre.html">▸ Giovanissimi</a></li><li><a href="squadre.html">▸ Esordienti</a></li><li><a href="squadre.html">▸ Pulcini</a></li></ul></div>
+        <div class="footer-col"><h4>Contatti</h4><div class="footer-contact-item"><span class="icon">📍</span><span>[Indirizzo]</span></div><div class="footer-contact-item"><span class="icon">📞</span><span>[Telefono]</span></div><div class="footer-contact-item"><span class="icon">✉️</span><span>[Email]</span></div><div class="footer-contact-item"><span class="icon">🕐</span><span>[Orari]</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span class="current-year"></span> U.S. Sporting Arno 1979 — Tutti i diritti riservati</span><span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Cookie Policy</a></span></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/[NUMERO]" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+  <button id="backToTop" aria-label="Torna in cima">↑</button>
+  <script src="js/ticker.js"></script><script src="js/menu.js"></script><script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orari allenamenti U.S. Sporting Arno 1979 — Tutti i giorni e gli orari per ogni categoria.">
+  <title>Orari Allenamenti — U.S. Sporting Arno 1979</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .week-table { width:100%; border-collapse:collapse; background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-dark); }
+    .week-table thead th { background:var(--color-dark); color:#fff; padding:14px 16px; font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; text-align:center; }
+    .week-table thead th:first-child { text-align:left; }
+    .week-table tbody tr { border-bottom:1px solid var(--color-gray); }
+    .week-table tbody tr:last-child { border-bottom:none; }
+    .week-table tbody tr:hover { background:var(--color-light); }
+    .week-table tbody td { padding:14px 16px; text-align:center; font-size:0.88rem; }
+    .week-table tbody td:first-child { text-align:left; font-weight:700; color:var(--color-dark); }
+    .time-slot { display:inline-block; background:var(--color-primary); color:var(--color-black); padding:4px 12px; border-radius:50px; font-size:0.78rem; font-weight:800; white-space:nowrap; }
+    .time-slot.alt { background:var(--color-accent); color:#fff; }
+    .time-slot.light { background:var(--color-light2); color:var(--color-primary-deeper); }
+    .empty-slot { color:var(--color-gray-mid); font-size:1.2rem; }
+    .field-info { display:flex; align-items:flex-start; gap:16px; padding:20px; background:var(--color-light); border-radius:var(--radius-sm); margin-bottom:14px; }
+    .field-icon { font-size:1.8rem; flex-shrink:0; }
+    .field-name { font-weight:800; font-size:0.95rem; color:var(--color-dark); margin-bottom:2px; }
+    .field-detail { font-size:0.82rem; color:var(--color-text-light); }
+    .info-box { background:linear-gradient(135deg,var(--color-primary),var(--color-accent)); border-radius:var(--radius); padding:28px 32px; color:var(--color-black); margin-bottom:40px; }
+    .info-box h3 { font-size:1rem; font-weight:900; text-transform:uppercase; margin-bottom:12px; }
+    .info-box ul { list-style:disc; padding-left:20px; }
+    .info-box ul li { font-size:0.88rem; margin-bottom:6px; line-height:1.5; }
+  </style>
+</head>
+<body>
+
+  <div class="ticker-wrap" role="marquee"><div class="ticker-inner"><div class="ticker-label">⚽ NEWS</div><div class="ticker-scroll"><div class="ticker-content"></div></div></div></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo"><img src="images/logo.png" alt="U.S. Sporting Arno 1979 Logo"><div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div></a>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="societa.html">La Società</a></li><li><a href="squadre.html">Squadre</a></li>
+          <li><a href="calendario.html">Calendario</a></li><li><a href="allenamenti.html" class="active">Allenamenti</a></li>
+          <li><a href="notizie.html">Notizie</a></li><li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta"><a href="iscrizioni.html" class="btn-cta">Iscrizioni Online</a></div>
+      <button class="hamburger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" role="navigation">
+    <a href="index.html">🏠 Home</a><a href="societa.html">🏟️ La Società</a><a href="squadre.html">👥 Squadre</a>
+    <a href="calendario.html">📅 Calendario</a><a href="allenamenti.html">⏰ Allenamenti</a>
+    <a href="notizie.html">📰 Notizie</a><a href="contatti.html">📞 Contatti</a>
+    <a href="iscrizioni.html" class="btn-cta-mobile">⚽ Iscrizioni Online</a>
+  </nav>
+
+  <main role="main">
+    <div class="page-hero">
+      <div class="container">
+        <h1>Orari <span>Allenamenti</span></h1>
+        <p>Tutti i giorni e gli orari per ogni categoria — aggiornati per la stagione corrente</p>
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Allenamenti</span></nav>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- INFO BOX -->
+        <div class="info-box fade-in">
+          <h3>📢 Informazioni importanti</h3>
+          <ul>
+            <li>[Inserisci eventuali comunicazioni importanti sugli allenamenti, ad es. variazioni orari, chiusure per festività, ecc.]</li>
+            <li>Per informazioni e variazioni segui i nostri canali social e controlla questa pagina regolarmente.</li>
+            <li>In caso di maltempo gli allenamenti potranno subire variazioni — verifica sempre con il tuo allenatore.</li>
+            <li>Per iscriversi o per ulteriori informazioni contatta la <a href="contatti.html" style="font-weight:800; text-decoration:underline;">segreteria</a>.</li>
+          </ul>
+        </div>
+
+        <!-- TABELLA SETTIMANALE -->
+        <h2 class="section-title" style="margin-bottom:8px;">Orari settimanali <span>per categoria</span></h2>
+        <p class="section-subtitle">Clicca sulla riga per dettagli — 🏠 = Campo principale · 📍 = Campo secondario</p>
+
+        <div class="table-wrap fade-in" style="margin-bottom:48px;">
+          <table class="week-table" aria-label="Orari allenamenti settimanali">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Lunedì</th><th>Martedì</th><th>Mercoledì</th>
+                <th>Giovedì</th><th>Venerdì</th><th>Sabato</th><th>Domenica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🥇 Prima Squadra</td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="time-slot alt">Partita</span></td>
+                <td><span class="empty-slot">—</span></td>
+              </tr>
+              <tr>
+                <td>⚽ Juniores</td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot light">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+              </tr>
+              <tr>
+                <td>🏃 Allievi</td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot alt">Partita</span></td>
+                <td><span class="empty-slot">—</span></td>
+              </tr>
+              <tr>
+                <td>🌟 Giovanissimi</td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot light">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+              </tr>
+              <tr>
+                <td>⭐ Esordienti</td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot light">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+              </tr>
+              <tr>
+                <td>👦 Pulcini</td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="time-slot light">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+              </tr>
+              <tr>
+                <td>🍼 Piccoli Amici</td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="empty-slot">—</span></td>
+                <td><span class="time-slot light">[HH:MM–HH:MM]</span></td>
+                <td><span class="empty-slot">—</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- CARDS DETTAGLIO PER CATEGORIA -->
+        <h2 class="section-title" style="margin-bottom:8px;">Dettaglio <span>per categoria</span></h2>
+        <p class="section-subtitle" style="margin-bottom:40px;">Allenatori, campi e orari precisi per ogni squadra</p>
+
+        <div class="schedule-grid">
+
+          <div class="schedule-card fade-in">
+            <div class="schedule-card-header">
+              <h3>🥇 Prima Squadra</h3>
+              <p>Mister: [Nome Allenatore]</p>
+            </div>
+            <div class="schedule-card-body">
+              <div class="schedule-row">
+                <div><p class="schedule-day">Lunedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Mercoledì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Venerdì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-card fade-in">
+            <div class="schedule-card-header">
+              <h3>⚽ Juniores</h3>
+              <p>Mister: [Nome Allenatore]</p>
+            </div>
+            <div class="schedule-card-body">
+              <div class="schedule-row">
+                <div><p class="schedule-day">Martedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Giovedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Sabato</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-card fade-in">
+            <div class="schedule-card-header">
+              <h3>🏃 Allievi</h3>
+              <p>Mister: [Nome Allenatore]</p>
+            </div>
+            <div class="schedule-card-body">
+              <div class="schedule-row">
+                <div><p class="schedule-day">Lunedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Mercoledì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-card fade-in">
+            <div class="schedule-card-header">
+              <h3>🌟 Giovanissimi</h3>
+              <p>Mister: [Nome Allenatore]</p>
+            </div>
+            <div class="schedule-card-body">
+              <div class="schedule-row">
+                <div><p class="schedule-day">Martedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Giovedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-card fade-in">
+            <div class="schedule-card-header">
+              <h3>⭐ Esordienti</h3>
+              <p>Mister: [Nome Allenatore]</p>
+            </div>
+            <div class="schedule-card-body">
+              <div class="schedule-row">
+                <div><p class="schedule-day">Lunedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Giovedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-card fade-in">
+            <div class="schedule-card-header">
+              <h3>👦 Pulcini &amp; Piccoli Amici</h3>
+              <p>Responsabile: [Nome Cognome]</p>
+            </div>
+            <div class="schedule-card-body">
+              <div class="schedule-row">
+                <div><p class="schedule-day">Martedì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Venerdì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+              <div class="schedule-row">
+                <div><p class="schedule-day">Mercoledì</p><p class="schedule-place">📍 [Campo/Indirizzo]</p></div>
+                <span class="schedule-time">[HH:MM – HH:MM]</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CAMPI DI ALLENAMENTO -->
+        <div style="margin-top:60px;">
+          <h2 class="section-title" style="margin-bottom:32px;">I nostri <span>Campi</span></h2>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+            <div class="field-info">
+              <span class="field-icon">🏟️</span>
+              <div>
+                <p class="field-name">Campo Principale — [Nome Campo]</p>
+                <p class="field-detail">📍 [Indirizzo completo, Città]<br>[Note aggiuntive sul campo, dimensioni, manto, ecc.]</p>
+              </div>
+            </div>
+            <div class="field-info">
+              <span class="field-icon">⚽</span>
+              <div>
+                <p class="field-name">Campo Secondario — [Nome Campo]</p>
+                <p class="field-detail">📍 [Indirizzo completo, Città]<br>[Note aggiuntive sul campo secondario.]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><div class="footer-logo"><img src="images/logo.png" alt="U.S. Sporting Arno 1979"><div class="logo-text"><span class="logo-name">U.S. Sporting Arno</span>Fondata nel 1979</div></div><p>[Descrizione società.]</p><div class="footer-social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="WhatsApp">💬</a></div></div>
+        <div class="footer-col"><h4>Sezioni</h4><ul><li><a href="index.html">▸ Home</a></li><li><a href="societa.html">▸ La Società</a></li><li><a href="squadre.html">▸ Squadre</a></li><li><a href="calendario.html">▸ Calendario</a></li><li><a href="allenamenti.html">▸ Orari Allenamenti</a></li><li><a href="notizie.html">▸ Notizie</a></li></ul></div>
+        <div class="footer-col"><h4>Categorie</h4><ul><li><a href="squadre.html">▸ Prima Squadra</a></li><li><a href="squadre.html">▸ Juniores</a></li><li><a href="squadre.html">▸ Allievi</a></li><li><a href="squadre.html">▸ Giovanissimi</a></li><li><a href="squadre.html">▸ Esordienti</a></li><li><a href="squadre.html">▸ Pulcini</a></li></ul></div>
+        <div class="footer-col"><h4>Contatti</h4><div class="footer-contact-item"><span class="icon">📍</span><span>[Indirizzo]</span></div><div class="footer-contact-item"><span class="icon">📞</span><span>[Telefono]</span></div><div class="footer-contact-item"><span class="icon">✉️</span><span>[Email]</span></div><div class="footer-contact-item"><span class="icon">🕐</span><span>[Orari]</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span class="current-year"></span> U.S. Sporting Arno 1979 — Tutti i diritti riservati</span><span><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Cookie Policy</a></span></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/[NUMERO]" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+  <button id="backToTop" aria-label="Torna in cima">↑</button>
+  <script src="js/ticker.js"></script><script src="js/menu.js"></script><script src="js/main.js"></script>
+</body>
+</html>
